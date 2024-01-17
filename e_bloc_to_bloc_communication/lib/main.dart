@@ -41,7 +41,18 @@ class MyApp extends StatelessWidget {
           create: (ctx) =>
               // not new instance but existing instance sending of InternetCubit.
               CounterCubit(
-                // remember to use the context inside create: , while sending an existing instance.
+            // remember to use the context inside create: , while sending an existing instance.
+
+            // because as the context concept explained by flutterly, using context means it starts to
+            // search for the required context in above parent from this mentioned context below.
+
+            // so now, if we use buildcontext context here, it will start searching for BlocProvider
+            // context above build widget, but BlocProvider is below build widget, so it wont find it.
+
+            // so using the context of create :, starts searching for BlocProvider InternetCubit context
+            // above this context, and its present above. so found it.
+
+            // for more explanatio : watch buildcontext explanation of flutterly on youtube.
             internetCubit: ctx.read<InternetCubit>(),
           ),
         ),
