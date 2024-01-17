@@ -1,6 +1,8 @@
 // New updates of Bloc.
 // Instead of BlocBuilder we can use context.watch<blocA>().state;
-// which also works as a multiblocprovider. 
+// instead of buildWhen in BlocBuilder we can use : context.select((){});
+// and context.read();
+// which also works as a multiblocprovider.
 
 import 'package:d_bloc_route_access_counterapp_anonymus_routing/logic/cubit/internet_cubit.dart';
 
