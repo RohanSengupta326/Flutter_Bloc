@@ -24,7 +24,7 @@ void main() async {
   );
 
   // if wanna use blocObserver.
-  // Bloc.observer = MyBlocObserver();
+  // Bloc.observer = MyBlocObserver() ;
 
   runApp(MyApp());
 }
